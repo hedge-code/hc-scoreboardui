@@ -1,5 +1,9 @@
-import { createTheme } from "@mantine/core";
+import type { MantineThemeOverride } from "@mantine/core";
+import { fetchNui } from "./utils/fetchNui";
 
-export const theme = createTheme({
-  /* Put your mantine theme override here */
-});
+async function createTheme(theme: MantineThemeOverride): Promise<MantineThemeOverride> {
+  const config = await fetchNui<Pick<MantineThemeOverride, 'primaryColor' | 'primaryShade'>>('getConfig');
+  return {...config, ...theme};
+}
+
+export default createTheme;

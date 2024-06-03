@@ -1,5 +1,9 @@
-# Mantine Vite template
+# HC SCOREBOARD UI
 
-Get started with the template by clicking `Use this template` button on the top of the page.
+## Installation
 
-[Documentation](https://mantine.dev/guides/vite/)
+* Copy the latest released zip package.
+
+* Extract the package to the web/html directory in the scoreboard resource.
+
+* Set `ui_page` to index.html
